@@ -3,7 +3,7 @@ from groq import groq
 
 st.set_page_config("PragyanAI Content Genrator",layout="wide")
 st.title("PragyanAI - Content Genrator")
-st.image("shiv.jpg")
+st.image("")
 # Get GROQ API Key
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 # Get Product Name and Audience for That Product
@@ -28,5 +28,5 @@ if "text" in st.session_state:
             file_name="marketing_copy.txt",
             mime="text/plain"
         )
-    else:
+else:
         st.info("Generate content first")
